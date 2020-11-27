@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.font-mont {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.font-abril {
+  font-family: "Abril Fatface" !important;
+}
+
+body {
+  font-size: 62.5%; /* defaults the font size to 10px */
+}
+
+.text-sm {
+  font-size: 1.2rem; /* 12px */
+}
+
+.text-md {
+  font-size: 2rem; /* 20px */
+}
+
+.pt-sm {
+  margin-top: 1.2rem;
+}
