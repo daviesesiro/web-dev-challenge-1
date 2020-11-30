@@ -1,3 +1,5 @@
+@import "./anim.css";
+
 html {
   --priamry-color: #e53935;
   --primary-color-variant: #e76a68;
@@ -28,8 +30,8 @@ img {
   width: 100%;
 }
 
-.font-mont {
-  font-family: "Montserrat", sans-serif !important;
+button {
+  cursor: pointer;
 }
 
 .font-abril {
@@ -62,7 +64,21 @@ header .logo {
 }
 
 header .logo img {
-  height: 2rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+}
+
+header nav.stick {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--priamry-color);
+  z-index: 200;
+}
+
+header nav.stick ul {
+  margin-top: 0;
 }
 
 header nav ul {
@@ -96,7 +112,6 @@ section.hero {
   position: relative;
   padding: 5rem 1rem;
   z-index: 1;
-  min-height: 70vh;
   max-width: var(--max-width);
 }
 
@@ -111,8 +126,8 @@ section.hero {
 }
 
 .hero .left h1 {
-  font-size: 1.8rem;
-  color: white;
+  font-size: 3rem;
+  color: var(--secondary-color-variant);
   letter-spacing: 0.2rem;
   line-height: 150%;
   text-align: center;
@@ -121,9 +136,10 @@ section.hero {
 
 .hero .left p {
   font-size: 0.8rem;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   text-align: center;
-  color: #1d0505;
+  color: white;
+  line-height: 200%;
   z-index: 200;
 }
 
@@ -141,6 +157,7 @@ section.hero {
   padding: 0.9rem;
   outline: none;
   border: unset;
+  cursor: pointer;
   margin: 3rem auto 0 auto;
 }
 
@@ -257,7 +274,7 @@ footer .newsletter {
 footer .newsletter p {
   font-size: 0.8rem;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 footer .newsletter .form-box {
@@ -332,6 +349,7 @@ footer .socials li a img {
   }
 
   header .logo img {
+    margin: unset;
     height: 2rem;
     width: unset;
   }
@@ -391,6 +409,11 @@ footer .socials li a img {
     margin: 1rem 0 0 0;
     color: white;
     line-height: 200%;
+  }
+
+  .hero .left button {
+    margin-left: 0;
+    padding: 1.3rem;
   }
 
   .hero .right {
