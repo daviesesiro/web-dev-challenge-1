@@ -1,5 +1,4 @@
 const nav = document.querySelector("header nav");
-const cards = document.querySelectorAll(".card");
 
 document.addEventListener("scroll", () => {
   if (window.scrollY >= 30 && window.innerWidth <= 900) {
