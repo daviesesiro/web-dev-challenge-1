@@ -75,6 +75,7 @@ header {
 header .logo {
   text-align: center;
   display: block;
+  perspective: 400;
 }
 
 header .logo img {
@@ -88,7 +89,15 @@ header nav.stick {
   right: 0;
   left: 0;
   background-color: var(--primary-color);
+  box-shadow: 0 .1rem .13rem rgba(0, 0, 0, 0.24);
+  transform: translateY(-100%);
+  transition: .3s;
+  transform-origin: top;
   z-index: 200;
+}
+
+header nav.stick.show{
+  transform: translateY(0);
 }
 
 header nav.stick {
