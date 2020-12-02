@@ -4,24 +4,35 @@ const tree = document.querySelector(".big-tree-illus");
 const circle = document.querySelector(".circle-illustration");
 const header = document.querySelector("header");
 const bestingSellingSection = document.querySelector(".best-selling");
+const spacer = document.querySelector(".spacer");
 
 document.addEventListener("scroll", () => {
-  if (window.scrollY >= 30 && window.innerWidth <= 900) {
-    nav.classList.add("stick");
+  if (window.scrollY >= 200 && window.innerWidth <= 900) {
+    spacer.style.height = getComputedStyle(nav).height;
+    toggleClass(nav, "stick");
     if (window.scrollY >= bestingSellingSection.offsetTop) {
-      nav.classList.add("show");
+      nav.style.transition = ".4s";
+      toggleClass(nav, "show");
     }
   } else {
-    nav.classList.remove("stick");
+    toggleClass(nav, "stick", false);
+    spacer.style.height = "0px";
   }
   if (!(window.scrollY >= bestingSellingSection.offsetTop)) {
-    nav.classList.remove("show");
+    toggleClass(nav, "show", false);
+    setTimeout(() => {
+      nav.style.transition = "0s";
+    }, 0);
   }
 });
 
+const toggleClass = (element, className, add = true) => {
+  add ? element.classList.add(className) : element.classList.remove(className);
+};
+
 // moveover effect
 const LIMIT = 200;
-function shadow(e) {
+function move(e) {
   if (window.innerWidth <= 900) {
     tree.style.transform = ``;
     return;
@@ -36,4 +47,4 @@ function shadow(e) {
   tree.style.transform = `translate(${xLIMIT}px, ${yLIMIT}px)`;
 }
 
-hero.addEventListener("mousemove", shadow, { capture: true });
+hero.addEventListener("mousemove", move, { capture: true });

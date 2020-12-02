@@ -91,8 +91,8 @@ header nav.stick {
   background-color: var(--primary-color);
   box-shadow: 0 .1rem .13rem rgba(0, 0, 0, 0.24);
   transform: translateY(-100%);
-  transition: .3s;
   transform-origin: top;
+  margin-top: 0;
   z-index: 200;
 }
 
@@ -100,9 +100,6 @@ header nav.stick.show{
   transform: translateY(0);
 }
 
-header nav.stick {
-  margin-top: 0;
-}
 
 header nav {
   display: flex;
@@ -220,7 +217,7 @@ header nav a:last-child {
   letter-spacing: 1px;
   align-items: baseline;
   margin-bottom: 3rem;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color-variant);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -506,6 +503,7 @@ footer .socials li a img {
   }
 
   .hero .right img {
+    user-select: none;
     text-align: right;
     width: 70%;
     margin-bottom: -10rem;
