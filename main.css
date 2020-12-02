@@ -54,7 +54,7 @@ button {
 }
 
 body {
-  cursor: url("/images/cursor.svg"), default;
+  cursor: url("./images/cursor.svg"), default;
   font-size: 62.5%; /* defaults the font size to 10px */
   font-family: "Montserrat", sans-serif;
   text-rendering: optimizeLegibility;
